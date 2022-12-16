@@ -1,0 +1,18 @@
+<%- include('loginHeader'); -%>
+
+    <body>
+        <div class="container justify-content-center w-75 mt-5">
+            <h1 class="display-3 text-center">Welcome</h1>
+            <h1 class="display-3 text-center">
+                <%= name %>
+            </h1>
+            <div class="container justify-content-center d-flex">
+                <div class="">
+                    <a href="/logout"><button class="btn btn-secondary btn-lg"
+                            type="button">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <%- include('footer'); -%>

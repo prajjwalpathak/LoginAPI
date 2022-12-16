@@ -1,0 +1,45 @@
+<%- include('header'); -%>
+
+    <body>
+        <div>
+            <h1 class="display-3 text-center m-5">REGISTER</h1>
+            <%if(message !="" ) { %>
+                <div class="alert alert-dark">
+                    <%= message %>
+                </div>
+                <% }%>
+                    <div class="container w-25 d-flex justify-content-center flex-column">
+                        <form action="/signup" method="POST">
+                            <div class="form-group center">
+                                <div>
+                                    <label for="firstname">First Name</label>
+                                    <input class="form-control" type="text" id="firstname" name="firstname" required>
+                                </div>
+                                <div>
+                                    <label for="lastname">Last Name</label>
+                                    <input class="form-control" type="text" id="lastname" name="lastname" required>
+                                </div>
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input class="form-control" type="text" id="username" name="username" required>
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="email" id="email" name="email" required>
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary my-3" type="submit">REGISTER</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <span>Already Registered? </span><a href="/signin">LOGIN</a>
+                        </div>
+                    </div>
+        </div>
+    </body>
+    <%- include('footer'); -%>

@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+
+    <body>
+        <div>
+            <h1 class="display-3 text-center m-5">LOGIN</h1>
+            <%if(message !="" ) { %>
+                <div class="alert alert-dark">
+                    <%= message %>
+                </div>
+                <% }%>
+                    <div class="container w-25 d-flex justify-content-center flex-column">
+                        <form action="/signin" method="POST">
+                            <div class="form-group center">
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="email" id="email" name="email" required>
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary my-3" type="submit">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <span>New Here? </span><a href="/signup">REGISTER</a>
+                        </div>
+                    </div>
+        </div>
+    </body>
+    <%- include('footer'); -%>
